@@ -1,0 +1,227 @@
+/** Sample queries for Commodity Trading business network
+*/
+
+query LookTrade {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.apache.tvmnetwork.Trade
+        ORDER BY [timestamp ASC]
+}
+
+query LookHistorianRecord {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.HistorianRecord
+      ORDER BY [transactionTimestamp DESC]
+}
+
+query LookIdentity {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.Identity
+}
+
+query LookParticipant {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.Participant
+}
+
+query LookNetworkAdmin {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.NetworkAdmin
+}
+
+query LookTransaction {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.Transaction
+}
+
+query LookRegistryTransaction {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.RegistryTransaction
+}
+
+query LookParticipantTransaction {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.ParticipantTransaction
+}
+
+query LookAddAsset {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.AddAsset
+}
+
+query LookUpdateAsset {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.UpdateAsset
+}
+
+query LookRemoveAsset {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.RemoveAsset
+}
+
+query LookAddParticipant {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.AddParticipant
+}
+
+query LookUpdateParticipant {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.UpdateParticipant
+}
+
+query LookRemoveParticipant {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.RemoveParticipant
+}
+
+query LookIssueIdentity {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.IssueIdentity
+}
+
+query LookActivateCurrentIdentity {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.ActivateCurrentIdentity
+}
+
+query LookRevokeIdentity {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.RevokeIdentity
+}
+
+query LookStartBusinessNetwork {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.StartBusinessNetwork
+}
+
+query LookResetBusinessNetwork {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.ResetBusinessNetwork
+}
+
+query LookSetLogLevel {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.SetLogLevel
+}
+
+
+
+
+
+query LookTradeByIdea {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.apache.tvmnetwork.Trade
+      WHERE (idea == _$idea)
+      ORDER BY [timestamp DESC]
+}
+
+query LookTradeByTxnId {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.apache.tvmnetwork.Trade
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookHistorianRecordByTeam {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.HistorianRecord
+      WHERE (participantInvoking == _$participantInvoking)
+}
+
+query LookIdentityByState {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.Identity
+      WHERE (state == _$state)
+}
+
+query LookAddAssetByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.AddAsset
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookUpdateAssetByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.UpdateAsset
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookRemoveAssetByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.RemoveAsset
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookAddParticipantByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.AddParticipant
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookUpdateParticipantByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.UpdateParticipant
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookRemoveParticipantByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.RemoveParticipant
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookIssueIdentityByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.IssueIdentity
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookActivateCurrentIdentityByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.ActivateCurrentIdentity
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookHistorianRecordByTxn {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.HistorianRecord
+      WHERE (transactionId == _$transactionId)
+}
+
+query LookHistorianRecordByTxnType {
+  description: "Select an Idea History"
+  statement:
+      SELECT org.hyperledger.composer.system.HistorianRecord
+      WHERE (transactionType == _$transactionType)
+}
